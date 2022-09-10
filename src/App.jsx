@@ -4,7 +4,7 @@ export const App = () => {
   return (
     <>
       <h1>
-        O começo
+        Meu começo
       </h1>
     </>
   )
