@@ -1,4 +1,5 @@
 import React from 'react'
+import { Footer } from './components/footer/Footer'
 
 export const App = () => {
   return (
@@ -6,6 +7,7 @@ export const App = () => {
       <h1>
         O começo
       </h1>
+      <Footer/>
     </>
   )
 }
