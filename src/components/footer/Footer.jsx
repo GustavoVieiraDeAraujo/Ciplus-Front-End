@@ -75,6 +75,9 @@ export function Footer() {
                     </C.ContactDiv>
                 </div>
             </C.FooterMain>
+            <C.Copy className="copy">
+                <C.CopyText>2022 &copy; CopyRight. CiPlus+ </C.CopyText>
+            </C.Copy>
         </C.Footer>
     )
 }

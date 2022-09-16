@@ -7,6 +7,7 @@ export const Footer = styled.footer`
     width: 100%;
     display: grid;
     grid-template-rows: 80px auto;
+    font-family: 'Inter', sans-serif;
 `
 export const FooterTop = styled.div`
     display: grid;
@@ -41,6 +42,7 @@ export const FooterMain = styled.div`
 export const FooterMainP = styled.p`
     margin: 0;
     align-self: center;
+    text-align: justify;
 `
 export const FooterH2 = styled.h2`
     margin: 0;
@@ -48,8 +50,7 @@ export const FooterH2 = styled.h2`
 `
 export const FooterMainCompany = styled.div`
     display: grid;
-    margin-left: 20px;
-    
+    margin-left: 30px;
 `
 export const FooterMainPlans = styled.div`
     display: grid;
@@ -75,3 +76,14 @@ export const ContactDiv = styled.div`
 export const ContactImg = styled.img`
     width: 24px;
 `
+export const Copy = styled.div`
+    background-color: #1E1E1E;
+    display: grid;
+    grid-template-rows: 90px;
+`
+export const CopyText = styled.p`
+    text-align: center;
+    margin-top: 30px;
+`
+
+
