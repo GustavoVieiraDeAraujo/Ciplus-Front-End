@@ -4,12 +4,15 @@ import ImgFace from "../../assets/img/facebook.png"
 import ImgTwitter from "../../assets/img/twitter.png"
 import ImgInsta from "../../assets/img/instagram.png"
 import ImgLink from "../../assets/img/linkedin.png"
+import Home from "../../assets/img/casa.png"
+import Tel from "../../assets/img/telefone.png"
+import Email from "../../assets/img/e-mail.png"
 
 
 export function Footer() {
     return (
-        <div style={footerContent} className="footer-content">
-            <div style={footerTop} className="footer-top">
+        <div  className="footer-content">
+            <div  className="footer-top">
                 <div className="social-text">
                     <p>Acompanhe nas redes sociais</p>
                 </div>
@@ -42,7 +45,7 @@ export function Footer() {
                     <p>black duo</p>
                 </div>
                 <div className="links">
-                    <h2>LINKS ÚTEIS</h2>
+                    <h2>LINKS</h2>
                     <a href="">minha conta</a>
                     <a href="">catálogo</a>
                     <a href="">ajuda</a>
@@ -50,15 +53,15 @@ export function Footer() {
                 <div className="contact">
                     <h2>CONTATO</h2>
                     <div className="locate">
-                        <img src="" alt="" />
+                        <img src={Home} alt="" />
                         <p>Brasil</p>
                     </div>
                     <div className="email">
-                        <img src="" alt="" />
+                        <img src={Email} alt="" />
                         <p>ciplus@email.br</p>
                     </div>
                     <div className="tel">
-                        <img src="" alt="" />
+                        <img src={Tel} alt="" />
                         <p>0800 123 1234</p>
                     </div>
                 </div>

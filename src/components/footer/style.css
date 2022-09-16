@@ -1,16 +1,19 @@
 .footer-content {
-    background-color: rgb(21, 22, 22);
     color: #fff;
     padding: 0;
     margin: 0;
     width: 100%;
+    display: grid;
+    grid-template-rows: 80px auto;
 }
 .footer-top {
-    padding-top: 50px;
     display: grid;
     background-color: #0B062B;
-    grid-template-columns: 80% 160px;
-    height: 100px;
+    height: 80px;
+    grid-template-columns: 1fr auto;
+}
+.footer-top div {
+    align-self: center;
 }
 .social-text p {
     font-size: 20px;
@@ -26,6 +29,63 @@
 .footer-main {
     background-color: #1E1E1E;
     display: grid;
-    grid-template-columns: 300px 30% 30% 30%;
+    width: 100%;
+    column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 230px;
 }
-
+.footer-main h2 {
+    margin: 0;
+    margin-top: 20px;
+}
+.company {
+    display: grid;
+    margin-left: 20px;
+}
+.company p {
+    margin: 0;
+}
+.plans {
+    display: grid;
+}
+.plans p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.links {
+    display: grid;
+    grid-template-rows: 20px 20px 20px;
+    row-gap: 35px;
+}
+.links a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0;
+    align-self: start;
+}
+.contact {
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+}
+.contact p {
+    margin: 0;
+    align-self: start;
+}
+.contact img {
+    width: 24px;
+}
+.contact div {
+    margin-top: 15px;
+}
+.locate {
+    display: grid;
+    grid-template-columns: 30px auto;
+}
+.email {
+    display: grid;
+    grid-template-columns: 30px auto;
+}
+.tel {
+    display: grid;
+    grid-template-columns: 30px auto;
+}
