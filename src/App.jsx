@@ -1,8 +1,10 @@
 import React from 'react'
+import { Forms } from './components/Forms/index.jsx'
 
 export const App = () => {
   return (
     <>
+      <Forms titulo={"Teste"}/>
     </>
   )
 }
