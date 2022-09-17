@@ -1,11 +1,10 @@
 import React from 'react'
+import Home from './pages/Home/Home'
 
 export const App = () => {
   return (
     <>
-      <h1>
-        O começo
-      </h1>
+    <Home />
     </>
   )
 }
