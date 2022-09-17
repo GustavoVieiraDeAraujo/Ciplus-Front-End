@@ -1,10 +1,11 @@
 import React from 'react'
-import { Forms } from './components/Forms/index.jsx'
+import { Carousel } from './components/Carousel/index.jsx'
+import "./Global.css"
 
 export const App = () => {
   return (
     <>
-      <Forms titulo={"Teste"}/>
+      <Carousel/>
     </>
   )
 }
