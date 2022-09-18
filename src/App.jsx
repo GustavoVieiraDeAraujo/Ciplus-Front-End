@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import Ingresso from "./components/Ingresso";
 
-export const App = () => {
-  return (
-    <>
-      <h1>
-        Meu começo
-      </h1>
-    </>
-  )
+function Ingressos() {
+  return <Ingresso />;
 }
+
+export default App;
