@@ -10,7 +10,7 @@ function Header(){
             <div className="grid-item"></div>
             <div className="grid-item alinha1">
                 <button className="botoes bNeutro">ENTRAR</button>
-                <button className="botoes bColored">CADASTRA-SE</button>
+                <button className="botoes bColored">CADASTRE-SE</button>
             </div>
         </StyleHeader>   
     )

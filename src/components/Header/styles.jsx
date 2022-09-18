@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyleHeader = styled.header`
+
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap%27');
 
 /* ESTILIZAÇÃO DO HEADER */
