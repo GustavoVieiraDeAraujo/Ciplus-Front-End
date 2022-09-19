@@ -5,19 +5,10 @@ export const StyleMain = styled.main`
 
 /* RESET CSS, RESETANDO OS VALORES PARA ESTILIZAR MANUALMENTE */
 
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
 /* ESTILIZAÇÃO DA MAIN */
 
 display: grid;
-grid-template-rows: 2fr 1fr 1fr 1fr 1fr 0.5fr;
+grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 height: 3200px;
 background: #000000;
 
@@ -25,10 +16,11 @@ background: #000000;
     background-image: url("https://wallpaperaccess.com/full/1354791.jpg");
     background-size: cover;
     background-position-y: -200px;
+    width: 100%;
+    margin-left: 0px;
 }
 
 .grid-item{
-    margin-top: 10px;
     text-align: center;
     color: white;
 }
@@ -118,6 +110,30 @@ h1{
     font-family: 'Inter', sans-serif;
     font-size: 27px;
 }
+.imgIngresso{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+.imgPipoca{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-top: -90px;
+}
+.divDaImg1{
+
+    display: grid;
+    justify-items: end;
+    
+}
+.divDaImg2{
+
+    display: grid;
+    justify-items: start;
+    
+}
+
 
 `    
 

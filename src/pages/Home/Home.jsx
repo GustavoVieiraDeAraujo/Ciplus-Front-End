@@ -7,9 +7,8 @@ import Footer from "./Footer/Footer.jsx"
 function Home(){
 
     return <div>
-        <Header />
         <Main />
-        <Footer/>
+
     </div>
 }
 
