@@ -1,15 +1,24 @@
 import React from "react";
-import App from "../App";
-import style from "../components/style.css";
-
-function Ingresso() {
+import { StyleMain } from "./style.jsx";
+function Main() {
   return (
-    <main className="grid-container">
-      <div className="grid-item fPrincipal"></div>
+    <StyleMain>
+      <div className="grid-item fPrincipal">
+        {" "}
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/rt-2cxAiPJk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div className="grid-item separa2">
         <img
           className="imgEdit"
-          src="https://i0.wp.com/www.themoviedb.org/t/p/w600_and_h900_bestv2/utAMIYnHweINM2jiMJYII9ILCw2.jpg?resize=250%2C350&ssl=1"
+          src="https://www.sonypictures.com.br/sites/brazil/files/2022-03/KEY%20ART_SPIDER%20NO%20WAY%20HOME.JPG"
         />
         <div className="separa3">
           <h2>Homem Aranha: Sem Volta Para Casa</h2>
@@ -55,8 +64,8 @@ function Ingresso() {
           <button className="estBotoes">23:00</button>
         </nav>
       </div>
-    </main>
+    </StyleMain>
   );
 }
 
-export default Ingresso;
+export default Main;

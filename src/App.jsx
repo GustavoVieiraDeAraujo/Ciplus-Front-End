@@ -1,5 +1,5 @@
 import React from "react";
-import Ingresso from "./components/Ingresso.jsx";
+import Ingresso from "./pages/Ingressos/Ingresso.jsx";
 
 function App() {
   return <Ingresso />;
