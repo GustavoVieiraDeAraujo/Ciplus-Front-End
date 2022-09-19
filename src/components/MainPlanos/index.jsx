@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleMainPlanos} from "./styles.jsx";
 import banner from "../MainPlanos/assets/banner.png"
+import { AreaCardPlans } from './../AreaCardPlans/index';
 
 
 function MainPlanos(){
@@ -20,12 +21,8 @@ function MainPlanos(){
                 </ul>
             </section>
 
-            <section className="grid-item Cards">
-                <div className="card1 corpoC">PREÇOS1</div>
-                <div className="card2 corpoC">PREÇOS2</div>
-                <div className="card3 corpoC">PREÇOS3</div>
-                <div className="card4 corpoC">PREÇOS4</div>
-            </section>
+            <AreaCardPlans/>
+
         </StyleMainPlanos>
     )
 }
