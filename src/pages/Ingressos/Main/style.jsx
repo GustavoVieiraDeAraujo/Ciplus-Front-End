@@ -102,7 +102,11 @@ export const StyleMain = styled.main`
   }
 
   a {
+    transition: 0.3s;
     cursor: pointer;
+  }
+  a:hover {
+    font-size: 23px;
   }
 
   .titleDay {
