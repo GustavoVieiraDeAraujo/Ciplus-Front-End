@@ -12,7 +12,7 @@ function Ingresso() {
           src="https://i0.wp.com/www.themoviedb.org/t/p/w600_and_h900_bestv2/utAMIYnHweINM2jiMJYII9ILCw2.jpg?resize=250%2C350&ssl=1"
         />
         <div className="separa3">
-          <h2>Os Aneis do Poder</h2>
+          <h2>Homem Aranha: Sem Volta Para Casa</h2>
           <div className="org">
             <p>LOGO IDADE</p> <p>duração</p> <p>Ação</p>
           </div>
@@ -21,10 +21,12 @@ function Ingresso() {
       <div className="grid-item separa4">
         <h2>Leia a Sinopse</h2>
         <p className="pF">
-          Em uma época de paz, um grupo de guerreiros enfrenta o ressurgimento
-          do mal na Terra-Média. Das profundezas escuras das Montanhas de Névoa,
-          das majestosas florestas de Lindon, até os confins do mapa, o legado
-          desses heróis é maior do que suas vidas.
+          Pela primeira vez na história cinematográfica do Homem-Aranha, nosso
+          herói amigo da vizinhança é desmascarado e não consegue mais separar
+          sua vida normal dos grandes riscos de ser um super-herói. Quando ele
+          pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais
+          perigosos, e o forçam a descobrir o que realmente significa ser o
+          Homem-Aranha.
         </p>
       </div>
       <div className="grid-item separa5">
