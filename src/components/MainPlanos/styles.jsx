@@ -2,8 +2,9 @@ import styled from "styled-components";
 export const StyleMainPlanos = styled.main`
 
 display: grid;
-grid-template-rows:  500px 200px 500px;
+grid-template-rows:  500px 180px 10px 300px 10px ;
 height: 1200px;
+width: auto;
 background: #000000;
 
 .banner{
@@ -13,15 +14,18 @@ background: #000000;
 .botoes{
     width: 300px;
     height: 60px;
-    margin-top: -50px;
     position: absolute;
-    left: 500px;
     background: #0B062B;
     border-radius: 7px;
     color: white;
     font-family: 'Inter';
     font-size: 20px;
-    align-items: center;
+    margin-top: 350px;
+}
+
+.alinhamento{
+    display: grid;
+    justify-items: center;
 }
 
 .Cards{
@@ -68,5 +72,28 @@ ul{
 
 .corAzul{
     color: #2F12A5;
+}
+
+.alinhaImgIngressos{
+    display: grid;
+    justify-items:end;
+    width: 80%;
+}
+
+
+.imgPipoca{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-top: -30px;
+}
+
+.imgIngressos{
+    width: 180px;
+    height: 160px;
+    position: absolute;
+    margin-top:-95px;
+    margin-left: 80px;
+    position: absolute;
 }
 `

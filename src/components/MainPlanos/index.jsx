@@ -2,12 +2,15 @@ import React from "react";
 import { StyleMainPlanos} from "./styles.jsx";
 import banner from "../MainPlanos/assets/banner.png"
 import { AreaCardPlans } from './../AreaCardPlans/index';
+import pipoca from "./assets/pipoca.png"
+import ingressos from "./assets/ingressos.png"
+
 
 
 function MainPlanos(){
     return (<StyleMainPlanos>
 
-            <section>
+            <section className="alinhamento">
                 <div className="grid-item"><img className="banner" src={banner}/></div>
                 <button className="botoes">Escolha seu plano</button>
             </section>
@@ -21,7 +24,11 @@ function MainPlanos(){
                 </ul>
             </section>
 
+            <div className= "alinhaImgIngressos"><img className="imgIngressos" src={ingressos}/></div>
+
             <AreaCardPlans/>
+
+            <div className= "alinhaImgPipoca"><img className="imgPipoca" src={pipoca}/></div>
 
         </StyleMainPlanos>
     )
