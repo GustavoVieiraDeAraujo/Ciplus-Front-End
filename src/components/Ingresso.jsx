@@ -2,7 +2,7 @@ import React from "react";
 import App from "../App";
 import style from "../components/style.css";
 
-function Ingressos() {
+function Ingresso() {
   return (
     <main className="grid-container">
       <div className="grid-item fPrincipal"></div>
@@ -57,4 +57,4 @@ function Ingressos() {
   );
 }
 
-export default Ingressos;
+export default Ingresso;

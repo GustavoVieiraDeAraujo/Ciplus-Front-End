@@ -1,7 +1,7 @@
 import React from "react";
-import Ingresso from "./components/Ingresso";
+import Ingresso from "./components/Ingresso.jsx";
 
-function Ingressos() {
+function App() {
   return <Ingresso />;
 }
 
