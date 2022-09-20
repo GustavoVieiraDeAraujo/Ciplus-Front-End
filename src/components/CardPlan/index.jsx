@@ -8,6 +8,7 @@ export const CardPlan =({type,price,benefits,duration_months})=>{
             <p>R${(price/100).toFixed(2)}{" "}reais</p>
             <p className = "benefits">{benefits}</p>
             <p>{duration_months} mês de duração</p>
+            <button>Escolher Plano</button>
         </StyleCardPlan>
     )
 }

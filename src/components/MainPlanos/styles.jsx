@@ -85,7 +85,7 @@ ul{
     width: 150px;
     height: 150px;
     position: absolute;
-    margin-top: -30px;
+    margin-top: 20px;
 }
 
 .imgIngressos{
