@@ -5,7 +5,7 @@ import wanda from "../assets/wanda.png"
 import pipoca from "../assets/pipocaerefri.png"
 import oculos from "../assets/oculos.png"
 import alice from "../assets/alice.jpg"
-
+import { Button } from "../../../components/Button";
 
 function Main() {
 
@@ -28,6 +28,9 @@ function Main() {
                 <div className="card3 corpoC">PREÇOS3</div>
                 <div className="card4 corpoC">PREÇOS4</div>
             </section>
+            <nav className="navs">
+            <Button border={"solid white 1px"} borderradius={"5px"} height={"40px"} text={"Escolha seu plano!"} width={"30%"}/>
+            </nav>
             <figure className="divDaImg2">
                 <img className="imgPipoca" src={pipoca} />
             </figure>
@@ -55,4 +58,4 @@ function Main() {
     )
 }
 
-export default Main
+export default Main;

@@ -137,6 +137,12 @@ h1{
     justify-items: start;
     
 }
+.navs{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 990px){
     .imgIngresso{
@@ -217,7 +223,9 @@ h1{
 }
 @media screen and (max-width: 920px){
     
-    
+    button{
+        width: 40%;
+    }
     .imgIngresso{
         margin-top: 60px;
     }
@@ -291,6 +299,9 @@ h1{
     }
     .fSize{
         margin-top: 0px;
+    }
+    button{
+        width: 75%;
     }
 }
 @media screen and (max-width: 360px){
