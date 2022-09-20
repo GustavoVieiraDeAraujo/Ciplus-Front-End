@@ -5,6 +5,7 @@ export const StyleMainPlans = styled.main`
     grid-template-rows:  500px 180px 10px 300px 10px ;
     height: 1200px;
     width: auto;
+    align-items: center;
     background: #000000;
 
     .banner{
@@ -96,4 +97,17 @@ export const StyleMainPlans = styled.main`
         margin-left: 80px;
         position: absolute;
     }
+    @media screen and (max-width: 500px){
+        .banner{
+            width: 100vw;
+            margin: 0 0 0 0;
+        }
+        .Descricao{
+            width: 100vw;
+            font-size: 100vw;
+        }
+    }
+
+
+
 `

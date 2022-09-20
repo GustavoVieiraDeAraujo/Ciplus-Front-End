@@ -12,4 +12,19 @@ export const StyleAreaCardPlans = styled.section`
         height: 300px;
         cursor: pointer;
     }
+    @media screen and (max-width: 500px){
+        display: grid;
+        justify-items: center;
+        color: white;
+
+        .organizaCard{
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(4, auto);
+            width: auto;
+            margin:  0 0 0 0;
+        }
+    }
+
+
 `

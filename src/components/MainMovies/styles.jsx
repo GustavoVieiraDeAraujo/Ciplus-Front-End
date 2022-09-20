@@ -4,12 +4,11 @@ export const StyleMainMovies = styled.main`
     display: grid;
     grid-template-rows: 150px 0.9fr 2fr;
     height: 1000px;
-    background: #000000;
-
+    background-color: #0B062B;
+    justify-items: center;
     .grid-item{
         
-        border: 1px solid red;
-        margin: 10px;
+      margin: 10px;
     }
 
     .cla1{
@@ -18,6 +17,9 @@ export const StyleMainMovies = styled.main`
         align-content: center;
         justify-content: center;
         justify-content: space-around;
+        width: 100%;
+        background: #000000;
+
     }
 
     .button{
@@ -37,10 +39,18 @@ export const StyleMainMovies = styled.main`
         justify-content: center;
         text-align: center;
         color: white;
+        width: 100%;
         font-size: 50px;
+        background-color: #0B062B;
     }
-
+    a:hover{
+        background-color: #0B062B;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
     h1{
         color: white;
     }
+
 `
