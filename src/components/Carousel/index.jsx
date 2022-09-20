@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { StyleCarousel } from "./styles.jsx";
-import { GetAll } from "../../services/Api.jsx";
+import { GetAll } from "../../services/Api";
 import { CardMovie } from "../CardMovie/index.jsx";
 
-//import rightArrow from "../../assets/img/right-arrow.png" olhar isso 
-//import leftArrow from "../../assets/img/left-arrow.png" olhar isso
+import rightArrow from "../../components/Footer/assets/right-arrow.png" 
+import leftArrow from "../../components/Footer/assets/left-arrow.png" 
 
 export const Carousel = () => {
 
@@ -47,3 +47,5 @@ export const Carousel = () => {
         </StyleCarousel>
     )
 }
+
+export default Carousel

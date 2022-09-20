@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleMainMovies } from "./styles.jsx";
+import Carousel from "../Carousel/index"
 
 export const MainMovies = ()=> {
     return (
@@ -11,6 +12,7 @@ export const MainMovies = ()=> {
                 <a className="button">Ingressos</a>
             </nav>
             <h1 className="grid-item Frase">Filmes em cartaz</h1>
+            <Carousel />
         </StyleMainMovies>
     )
 }
