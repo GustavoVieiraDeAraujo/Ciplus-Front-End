@@ -44,9 +44,10 @@ export const StyleMainMovies = styled.main`
         background-color: #0B062B;
     }
     a:hover{
-        background-color: white;
-        color: black;
+        background-color: #0B062B;
+        color: white;
         transition: 0.3s;
+        cursor: pointer;
     }
     h1{
         color: white;
