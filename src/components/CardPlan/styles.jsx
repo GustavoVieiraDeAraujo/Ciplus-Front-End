@@ -20,5 +20,10 @@ export const StyleCardPlan = styled.div`
         width: 80%;
         
     }
+   button{
+    border-radius: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+   }
 
 `

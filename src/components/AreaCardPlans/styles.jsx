@@ -9,7 +9,6 @@ export const StyleAreaCardPlans = styled.section`
         display: grid;
         grid-template-columns: repeat(4,auto);
         margin: 10px;
-        height: 300px;
-
+        height: 350px;
     }
 `
