@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
-import { StyleAreaCardPlans } from "./styles";
-import { CardPlan } from "../CardPlan";
-import { GetAll } from "../../services/Api"; 
+import { StyleAreaCardPlans } from "./styles.jsx";
+import { CardPlan } from "../CardPlan/index.jsx";
+import { GetAll } from "../../services/Api.jsx"; 
 
 export const AreaCardPlans =()=>{
     const [plans, setPlans] = useState([])

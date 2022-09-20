@@ -16,9 +16,9 @@ export const StyleCardPlan = styled.div`
         margin-top: 10px;
         font-size: 20px;
     }
+
     .benefits{
         width: 80%;
         
     }
-
 `

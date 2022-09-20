@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { StyleCarousel } from "./styles.jsx";
 import { GetAll } from "../../services/Api.jsx";
-import { Card } from "../Card/index.jsx";
+import { CardMovie } from "../CardMovie/index.jsx";
 
-import rightArrow from "../../assets/img/right-arrow.png"
-import leftArrow from "../../assets/img/left-arrow.png"
+//import rightArrow from "../../assets/img/right-arrow.png" olhar isso 
+//import leftArrow from "../../assets/img/left-arrow.png" olhar isso
 
 export const Carousel = () => {
 
@@ -34,7 +34,7 @@ export const Carousel = () => {
                 {data.map((movie) => {
                     const { id, movie_image_link } = movie;
                     return (
-                        <Card 
+                        <CardMovie 
                         id={id} 
                         imageLink={movie_image_link} 
                         />

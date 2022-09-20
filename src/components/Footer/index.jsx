@@ -1,12 +1,12 @@
 import * as C from "./styles"
 
-import ImgFace from "../../assets/img/facebook.png"
-import ImgTwitter from "../../assets/img/twitter.png"
-import ImgInsta from "../../assets/img/instagram.png"
-import ImgLink from "../../assets/img/linkedin.png"
-import Home from "../../assets/img/casa.png"
-import Tel from "../../assets/img/telefone.png"
-import Email from "../../assets/img/e-mail.png"
+import ImgFace from "./assets/facebook.png"
+import ImgTwitter from "./assets/twitter.png"
+import ImgInsta from "./assets/instagram.png"
+import ImgLink from "./assets/linkedin.png"
+import Home from "./assets/casa.png"
+import Tel from "./assets/telefone.png"
+import Email from "./assets/e-mail.png"
 
 export function Footer() {
     return (

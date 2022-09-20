@@ -1,18 +1,18 @@
 import React from "react";
 import { StyleHeader } from "./styles.jsx";
-import cine from "../Header/assets/cine.png";
+import { Link } from "react-router-dom";
 
+import logo from "./assets/Cine.png"
 
-function Header(){
+export const Header = ()=> {
     return (
         <StyleHeader>
-            <div className="grid-item"><img className="cineLogo" src={cine}/></div>
+            <div className="grid-item"><Link to={"/"}><img className="cineLogo" src={logo} /></Link></div>
             <div className="grid-item"></div>
             <div className="grid-item alinha1">
-                <button className="botoes bNeutro">ENTRAR</button>
-                <button className="botoes bColored">CADASTRE-SE</button>
+                <Link to={"/login"}><button className="botoes bNeutro">ENTRAR</button></Link>
+                <Link to={"/register"}><button className="botoes bColored">CADASTRE-SE</button></Link>
             </div>
         </StyleHeader>   
     )
 }
-export default Header;
