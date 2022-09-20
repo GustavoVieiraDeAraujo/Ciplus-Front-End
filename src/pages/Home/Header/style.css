@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap%27');
+/* RESET CSS, RESETANDO OS VALORES PARA ESTILIZAR MANUALMENTE */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+header{
+display: grid;  
+height: 106px;
+background-color: #0B062B;
+grid-template-columns: auto auto auto;
+
+
+}
+.grid-item{
+
+    margin: 10px;
+}
+.alinha1{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 300px;
+
+}
+.botoes{
+ width: 200px;
+ height: 50px;
+ border-radius: 10px;
+ margin-top: 15px;
+ color: white;
+ font-family: 'Inter', sans-serif;
+}
+.bNeutro{
+    background-color: #0B062B;
+    margin-left: 100px;
+}
+.bColored{
+   background-color:  #13678A;
+}
+.cineLogo{
+    width: 230px;
+    height: 200px;
+    margin-top: -65px;
+}
