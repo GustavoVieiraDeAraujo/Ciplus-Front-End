@@ -13,6 +13,7 @@ export const MainMovies = ()=> {
             </nav>
             <h1 className="grid-item Frase">Filmes em cartaz</h1>
             <Carousel />
+
         </StyleMainMovies>
     )
 }
