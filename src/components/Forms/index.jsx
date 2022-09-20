@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { StyleForm } from "./styles.jsx";
 import { Input } from "../Input/index.jsx"
 import { Button } from "../Button/index.jsx"
 import { CreateOne } from "../../services/Api";
+import { FormsContext } from "../../context/FormsContext.jsx";
 
 export const Forms = ({ ...props }) => {
 
-    const [formValues, setFormValues] = useState({})
+    const { formValues, handleInputChange} = useContext(FormsContext)
 
     const finishBuildingObject = (object) => {
         const date = new Date();
@@ -33,11 +34,6 @@ export const Forms = ({ ...props }) => {
         }
     }
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormValues({ ...formValues, [name]: value });
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
@@ -45,7 +41,7 @@ export const Forms = ({ ...props }) => {
         finishBuildingObject(data);
         await CreateOne("users", data)
     }
-
+    
     return (
         <StyleForm onSubmit={handleSubmit}>
             <h1>

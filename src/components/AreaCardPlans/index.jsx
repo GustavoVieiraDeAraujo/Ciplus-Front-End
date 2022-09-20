@@ -2,15 +2,19 @@ import React,{useState,useEffect} from "react";
 import { StyleAreaCardPlans } from "./styles.jsx";
 import { CardPlan } from "../CardPlan/index.jsx";
 import { GetAll } from "../../services/Api.jsx"; 
+import { Button } from "../Button/index.jsx";
+import { Link } from "react-router-dom";
+
 
 export const AreaCardPlans =()=>{
+
     const [plans, setPlans] = useState([])
+
     useEffect(()=> getPlans, [])
 
     async function getPlans(){
         try{
             const response = await GetAll("plans")
-            console.log(response)
             setPlans(response)
         }catch(e){
             console.log(e)
@@ -20,8 +24,9 @@ export const AreaCardPlans =()=>{
     return(
         <StyleAreaCardPlans>
             <div className = "organizaCard">
-                {plans.map( plans =>
+                {plans.map( (plans)=>
                     <CardPlan
+                        value={plans.id}
                         type={plans.type}
                         price={plans.price} 
                         benefits={plans.benefits} 
@@ -29,6 +34,7 @@ export const AreaCardPlans =()=>{
                     />
                 )}
             </div>
+            <Link to={"/register"}><Button /></Link>
         </StyleAreaCardPlans>
     )
 }

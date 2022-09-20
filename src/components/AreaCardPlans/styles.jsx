@@ -10,5 +10,6 @@ export const StyleAreaCardPlans = styled.section`
         grid-template-columns: repeat(4,auto);
         margin: 10px;
         height: 300px;
+        cursor: pointer;
     }
 `

@@ -12,6 +12,8 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { MainLoading } from "./components/MainLoading";
 
+import { FormsProvider } from "./context/FormsContext.jsx";
+
 export const App = () => {
 
   const [display, setDisplay] = useState("")
@@ -21,18 +23,20 @@ export const App = () => {
   }, 5000);
 
   return (
-    <BrowserRouter>
-      <MainLoading display={display}/>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/login" element={<Login/>} />
-        <Route path="/movies" element={<Movies/>} />
-        <Route path="/plans" element={<Plans/>} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/tickets" element={<Tickets/>} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <FormsProvider>
+      <BrowserRouter>
+          <MainLoading display={display}/>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/login" element={<Login/>} />
+            <Route path="/movies" element={<Movies/>} />
+            <Route path="/plans" element={<Plans/>} />
+            <Route path="/register" element={<Register/>} />
+            <Route path="/tickets" element={<Tickets/>} />
+          </Routes>
+          <Footer />
+      </BrowserRouter>
+    </FormsProvider>
   )
 }

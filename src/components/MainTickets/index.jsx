@@ -2,6 +2,20 @@ import React from "react";
 import { StyleMainTickets } from "./styles.jsx";
 
 export const MainTickets = ()=> {
+
+  const [tickets, setTickets] = useState([])
+  useEffect(() => getPlans, [])
+
+  async function getPlans() {
+    try {
+      const response = await GetAll("tickets")
+      console.log(response)
+      setTickets(tickets)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
   return (
     <StyleMainTickets>
       <div className="grid-item fPrincipal">

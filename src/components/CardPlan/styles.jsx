@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyleCardPlan = styled.div`
+export const StyleCardPlan = styled.label`
     display: grid;
     grid-template-rows: repeat(4, auto);
     height: auto;
@@ -11,6 +11,7 @@ export const StyleCardPlan = styled.div`
     border-radius: 10px;
     text-align: start;
     justify-items: center;
+
 
     h2{
         margin-top: 10px;
