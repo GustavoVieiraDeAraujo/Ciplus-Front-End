@@ -8,6 +8,10 @@ import oculos from "./assets/oculos.png";
 import pipoca from "./assets/pipocaerefri.png";
 import wanda from "./assets/wanda.png";
 import moana from "./assets/moana.png";
+import basic from "./assets/basic.jpg"
+import standart from "./assets/standart.jpg"
+import premium from "./assets/premium.jpg"
+import blackduo from "./assets/black-duo.jpg"
 
 export const MainHome = ()=> {
     return (
@@ -23,10 +27,18 @@ export const MainHome = ()=> {
                 <img className="imgIngresso" src={oculos} />
             </figure>
             <section className="grid-item Cards">
-                <div className="card1 corpoC">PREÇOS1</div>
-                <div className="card2 corpoC">PREÇOS2</div>
-                <div className="card3 corpoC">PREÇOS3</div>
-                <div className="card4 corpoC">PREÇOS4</div>
+                <div className="card1 corpoC">
+                <img className="imgC" src={basic} />
+                </div>
+                <div className="card2 corpoC">
+                <img className="imgC" src={standart} />
+                </div>
+                <div className="card3 corpoC">
+                <img className="imgC" src={premium} />
+                </div>
+                <div className="card4 corpoC">
+                <img className="imgC" src={blackduo} />
+                </div>
             </section>
             <Link className="navs" to={"/plans"}>
                 <Button 

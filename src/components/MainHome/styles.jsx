@@ -3,9 +3,9 @@ export const StyleMainHome = styled.main`
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap%27');
 display: grid;
-grid-template-rows: 1.3fr 1fr 0.2fr 1fr 0.2fr 0.5fr 0.5fr 0.2fr;
-width: auto;
-height: 3200px;
+grid-template-rows: 1.3fr 1fr 0.2fr 1fr 0.2fr 0.5fr 0.2fr 0.2fr;
+width: 100%;
+height: 3300px;
 background: #000000;
 
 .fotoCa{
@@ -22,12 +22,13 @@ background: #000000;
     margin-top: 0px;
     text-align: center;
     color: white;
+    width: auto;
 }
 .item1{
     align-items: center;
     display: grid;
     grid-template-columns: auto auto;
-
+    margin-bottom: 80px;
 }
 .item2{
     align-items: center;
@@ -52,9 +53,12 @@ background: #000000;
     align-items: center;
 }
 .corpoC {
-    background-color: #0B062B;
+    display: grid;
+    text-align: center;
     border-radius: 10px;
+    align-items: center;
 }
+
 .dimensoes{
     margin-top: 50px;
     height: 650px;
@@ -78,6 +82,8 @@ background: #000000;
     text-align: center;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: 50px;
+    gap: 25px;
 }
 .TesteInp{
     text-align: center;
@@ -111,32 +117,36 @@ h1{
 .imgIngresso{
     position: absolute;
     width: 150px;
-    height: 150px;
+    height: 100px;
+    margin-top: 40px;
 }
 .imgPipoca{
     width: 150px;
     height: 150px;
     position: absolute;
-    margin-top: -90px;
+    margin-top: -80px;
 }
 .divDaImg1{
-
     display: grid;
     justify-items: end;
-    
+    height: 100px;
 }
 .divDaImg2{
 
     display: grid;
-    justify-items: start;
-    
+    justify-items: start;  
 }
 .navs{
     display: grid;
     align-items: center;
     justify-items: center;
     font-size: 20px;
+    text-decoration: none;
 }
+.imgC{
+        width: auto;
+        height: auto;
+    }
 
 @media screen and (max-width: 990px){
     .imgIngresso{
@@ -149,7 +159,7 @@ h1{
     }
     .corpoC{
         width: auto;
-        height: 300px;
+        height: auto;
         margin-top: 10px;
     }
     .dimensoes{
@@ -232,6 +242,12 @@ h1{
     .fSize{
         margin-top: -250px;
     }
+    .Cards{
+        gap: 30px;
+    }
+    .imgC{
+        width: auto;
+    }
 }
 @media screen and (max-width: 500px){
     .enfatiza{
@@ -248,8 +264,11 @@ h1{
     }
     .Cards{
         display: grid;
+        width: auto;
+        justify-items: center;
         grid-template-columns: auto;
         grid-template-rows: auto auto auto auto;
+        gap: 25px;
     }
     .item1, .item2{
         margin-top: 40px;
