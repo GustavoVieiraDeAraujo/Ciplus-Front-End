@@ -1,8 +1,9 @@
+
 import React from "react";
 import Ingresso from "./pages/Ingressos/Ingresso.jsx";
 
-function App() {
+export const App = () => {
   return <Ingresso />;
 }
 
-export default App;
+
