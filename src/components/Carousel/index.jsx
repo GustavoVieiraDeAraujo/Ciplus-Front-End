@@ -23,11 +23,7 @@ export const Carousel = () => {
     
     return(
         <StyleCarousel>
-            {/* <div className="logo">
-                <img src="" alt="" />
-            </div> */}
             <button class="buttons" onClick={handleLeftClick}>
-                {/* <img src="/static/images/216151_right_chevron_icon.png" alt="Scroll Left" /> */}
                 teste 1
             </button>
             <div class="carousel" ref={carousel}>
@@ -63,7 +59,6 @@ export const Carousel = () => {
                 })}
             </div>
             <button class="buttons"  onClick={handleRightClick}>
-                {/* <img src="/static/images/216151_right_chevron_icon.png" alt="Scroll Right" /> */}
                 teste 2
             </button>
         </StyleCarousel>
