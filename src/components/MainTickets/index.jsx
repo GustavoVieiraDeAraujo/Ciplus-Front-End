@@ -1,5 +1,8 @@
 import React from "react";
 import { StyleMainTickets } from "./styles.jsx";
+import { useEffect, useState, useRef } from "react";
+import { GetAll } from "../../services/Api.jsx";
+
 
 export const MainTickets = ()=> {
 
@@ -15,6 +18,11 @@ export const MainTickets = ()=> {
       //console.log(e)
    // }
  // } 
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => { GetAll("movies").then(response => setData(response)) }, []);
+  console.log(data)
 
   return (
     <StyleMainTickets>
@@ -38,19 +46,14 @@ export const MainTickets = ()=> {
         <div className="separa3">
           <h2 className="titleM">Homem Aranha:<br/> Sem Volta Para Casa</h2>
           <div className="org">
-            <p>LOGO IDADE</p> <p>duração</p> <p>Ação</p>
+            <p>12</p> <p>2:30 h</p> <p>AÇÃO / AVENTURA</p>
           </div>
         </div>
       </div>
       <div className="grid-item separa4">
         <h2 className="titleS">Leia a Sinopse</h2>
         <p className="pF">
-          Pela primeira vez na história cinematográfica do Homem-Aranha, nosso
-          herói amigo da vizinhança é desmascarado e não consegue mais separar
-          sua vida normal dos grandes riscos de ser um super-herói. Quando ele
-          pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais
-          perigosos, e o forçam a descobrir o que realmente significa ser o
-          Homem-Aranha.
+        "Após o enorme sucesso nos cinemas, em 2021, Homem-Aranha: Sem Volta Para Casa retorna aos cinemas com mais 11 minutos de cenas adicionais inéditas. A vida de Peter Parker (Tom Holland) tornou-se um verdadeiro caos depois que sua identidade foi revelada para o mundo pelo vilão Mysterio. A inseparável Mary Jane (Zendaya) tenta ajudá-lo a encarar o fato como algo positivo, mas o jovem super-herói não se conforma e busca uma solução. Parker procura o parceiro Doutor Estranho (Benedict Cumberbatch) e pergunta se ele não conseguiria retirar essa informação da memória das pessoas. O arriscado feitiço foi colocado em prática, mas ao alterar a realidade eles criaram uma situação ainda mais perigosa. "
         </p>
       </div>
       <div className="grid-item separa5">
