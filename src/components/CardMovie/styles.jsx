@@ -48,4 +48,7 @@ export const StyleCardMovie = styled.div`
         padding-top: 3px;
         padding-left: 5px;
     }
+    @media screen and (max-width: 500px){
+        
+    }
 `
