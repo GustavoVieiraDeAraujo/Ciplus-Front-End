@@ -6,7 +6,7 @@ export const StyleHeader = styled.header`
     display: grid;  
     height: 100px;
     background-color: #0B062B;
-    grid-template-columns: auto 40% auto;
+    grid-template-columns: auto 10px auto;
     width: 100%;
 
     .grid-item{
@@ -15,7 +15,8 @@ export const StyleHeader = styled.header`
 
     .alinha1{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
     }
 
     .botoes{
@@ -31,7 +32,7 @@ export const StyleHeader = styled.header`
 
     .bNeutro{
         background-color: #0B062B;
-        margin-left: 100px;
+        margin-left: 10px;
     }
 
     .bColored{
@@ -70,7 +71,7 @@ export const StyleHeader = styled.header`
             width: 100%;
             height: 100%;
             grid-template-columns: auto;
-            grid-template-rows: auto auto;
+            grid-template-rows: auto auto auto;
             align-items: center;
             justify-items: center;
             }
