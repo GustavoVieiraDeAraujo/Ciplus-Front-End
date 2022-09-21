@@ -7,7 +7,7 @@ export const StyleHeader = styled.header`
     height: 100px;
     background-color: #0B062B;
     grid-template-columns: auto 10px auto;
-    width: 100%;
+    width: 100vw;
 
     .grid-item{
         margin: 10px;

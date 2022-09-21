@@ -7,6 +7,7 @@ export const StyleMainTickets = styled.main`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    width: 100vw;
 
     color: white;
     grid-template-rows: 600px 1fr 1fr 1fr 2fr;

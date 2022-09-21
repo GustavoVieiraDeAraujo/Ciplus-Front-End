@@ -4,12 +4,12 @@ export const StyleMainHome = styled.main`
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap%27');
 display: grid;
 grid-template-rows: 1.3fr 1fr 0.2fr 1fr 0.2fr 0.5fr 0.2fr 0.2fr;
-width: 100%;
+width: 100vw;
 height: 3300px;
 background: #000000;
 
 .fotoCa{
-    width: 100%;
+    width: 100vw;
     margin: 0 0 0 0;
 }
 .FotoFundo{

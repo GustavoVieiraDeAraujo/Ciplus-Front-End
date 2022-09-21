@@ -4,7 +4,7 @@ export const StyleMainLogin = styled.main`
     display: grid;
     grid-template-columns: 1fr;
     background-color: #0B062B;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     justify-items: center;
     align-items: center;

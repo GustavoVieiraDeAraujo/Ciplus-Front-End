@@ -34,7 +34,7 @@ export const SocialImg = styled.img`
 export const FooterMain = styled.div`
     background-color: #1E1E1E;
     display: grid;
-    width: 100%;
+    width: 100vw;
     column-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 230px;

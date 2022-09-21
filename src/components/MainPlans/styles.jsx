@@ -4,7 +4,7 @@ export const StyleMainPlans = styled.main`
     display: grid;
     grid-template-rows:  500px 180px 10px 300px 10px ;
     height: 1200px;
-    width: auto;
+    width: 100vw;
     align-items: center;
     background: #000000;
     
