@@ -29,8 +29,13 @@ export const StyleMainMovies = styled.main`
         width: 200px;
         height: 50px;
         color: white;
+        background-color: #000;
+        text-decoration: none;
     }
-
+    a {
+        text-decoration: none;
+        border-radius: 10px;
+    }
     .Frase{
         display: grid;
         align-content: center;
