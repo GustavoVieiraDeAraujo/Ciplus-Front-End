@@ -37,6 +37,7 @@ export const Carousel = () => {
                         <CardMovie 
                         id={id} 
                         imageLink={movie_image_link} 
+                        
                         />
                     );
                 })}
