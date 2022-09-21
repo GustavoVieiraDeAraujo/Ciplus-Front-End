@@ -69,4 +69,8 @@ export const StyleCarousel=styled.div`
     .buttons:first-childimg{
         transform:rotate(180deg);
     }
+    @media screen and (max-width: 750px){
+        width:100vw;
+    }
+
 `

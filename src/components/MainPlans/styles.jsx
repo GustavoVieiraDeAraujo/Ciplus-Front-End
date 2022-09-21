@@ -7,6 +7,7 @@ export const StyleMainPlans = styled.main`
     width: auto;
     align-items: center;
     background: #000000;
+    
 
     .banner{
         width: 100%;
@@ -98,6 +99,9 @@ export const StyleMainPlans = styled.main`
         position: absolute;
     }
     @media screen and (max-width: 500px){
+        width: 100vw;
+        height: 1500px;
+        gap: 300px;
         .alinhamento{
             display:none;
         }

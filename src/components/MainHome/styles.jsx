@@ -227,9 +227,7 @@ h1{
 }
 @media screen and (max-width: 920px){
     height: 100%;
-    display: grid;
-    grid-template-rows: repeat(8, auto);
-    width: 100%;
+    width: 100vw;
     button{
         width: 40%;
     }
@@ -248,6 +246,8 @@ h1{
     }
     .Cards{
         gap: 30px;
+        display: grid;
+        justify-items: center;
     }
     .imgC{
         width: auto;
