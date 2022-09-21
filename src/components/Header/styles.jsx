@@ -81,6 +81,9 @@ export const StyleHeader = styled.header`
         .cineLogo{
             width: 110px;
         }
+        .bColored{
+    padding: 5px;
+    }
     }
 
 
