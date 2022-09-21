@@ -226,7 +226,10 @@ h1{
     }
 }
 @media screen and (max-width: 920px){
-    
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    width: 100%;
     button{
         width: 40%;
     }
@@ -235,6 +238,7 @@ h1{
     }
     .fotoCa{
         height: 500px;
+        width: 100vw
     }
     .ExpC{
         margin-top: -250px;
@@ -249,7 +253,12 @@ h1{
         width: auto;
     }
 }
-@media screen and (max-width: 500px){
+
+@media screen and (max-width: 800px){
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    width: 100vw;
     .enfatiza{
         font-size: 30px;
     }
@@ -276,6 +285,7 @@ h1{
         gap: 5px;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
+        
     }
     .item1{
         height: 500px;
@@ -304,7 +314,10 @@ h1{
     }
 
     .imgIngresso{
-        margin-top: -30px;
+        display: none;
+    }
+    .imgPipoca{
+        display: none;
     }
 
     .ExpC{
@@ -318,6 +331,16 @@ h1{
     }
 }
 @media screen and (max-width: 360px){
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    .Cards{
+        margin: 0 0 0 0;
+    }
+    .imgC{
+        width: 100vw;
+        
+    }
     .enfatiza{
         font-size: 85%;
     }

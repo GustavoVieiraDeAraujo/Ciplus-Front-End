@@ -34,7 +34,7 @@ export const AreaCardPlans =()=>{
                     />
                 )}
             </div>
-            <Link to={"/register"}><Button /></Link>
+            <Link className="linkRedi" to={"/register"}><Button  />TESTE</Link>
         </StyleAreaCardPlans>
     )
 }

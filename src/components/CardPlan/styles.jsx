@@ -12,6 +12,11 @@ export const StyleCardPlan = styled.label`
     text-align: start;
     justify-items: center;
 
+    :hover{
+        border: solid 2px white;
+        cursor: pointer;
+    }
+    
 
     h2{
         margin-top: 10px;

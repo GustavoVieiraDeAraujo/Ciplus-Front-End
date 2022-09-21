@@ -43,6 +43,10 @@ export const FooterMainP = styled.p`
     margin: 0;
     align-self: center;
     text-align: justify;
+    @media screen and (max-width: 500px){
+        display:none;
+    }
+
 `
 export const FooterH2 = styled.h2`
     margin: 0;
@@ -55,6 +59,9 @@ export const FooterMainCompany = styled.div`
 export const FooterMainPlans = styled.div`
     display: grid;
     grid-template-rows: 40px 40px 40px 40px;
+    @media screen and (max-width: 500px){
+        display:none;
+    }  
 `
 export const FooterMainLinks = styled.div`
     display: grid;

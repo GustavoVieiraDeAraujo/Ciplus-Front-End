@@ -3,18 +3,18 @@ import { StyleMainTickets } from "./styles.jsx";
 
 export const MainTickets = ()=> {
 
-  const [tickets, setTickets] = useState([])
-  useEffect(() => getPlans, [])
+  //const [tickets, setTickets] = useState([])
+  //useEffect(() => getPlans, [])
 
-  async function getPlans() {
-    try {
-      const response = await GetAll("tickets")
-      console.log(response)
-      setTickets(tickets)
-    } catch (e) {
-      console.log(e)
-    }
-  }
+  //async function getPlans() {
+   // try {
+    //  const response = await GetAll("tickets")
+    //  console.log(response)
+   //   setTickets(tickets)
+  //  } catch (e) {
+      //console.log(e)
+   // }
+ // } 
 
   return (
     <StyleMainTickets>
@@ -36,14 +36,14 @@ export const MainTickets = ()=> {
           src="https://www.sonypictures.com.br/sites/brazil/files/2022-03/KEY%20ART_SPIDER%20NO%20WAY%20HOME.JPG"
         />
         <div className="separa3">
-          <h2>Homem Aranha: Sem Volta Para Casa</h2>
+          <h2 className="titleM">Homem Aranha:<br/> Sem Volta Para Casa</h2>
           <div className="org">
             <p>LOGO IDADE</p> <p>duração</p> <p>Ação</p>
           </div>
         </div>
       </div>
       <div className="grid-item separa4">
-        <h2>Leia a Sinopse</h2>
+        <h2 className="titleS">Leia a Sinopse</h2>
         <p className="pF">
           Pela primeira vez na história cinematográfica do Homem-Aranha, nosso
           herói amigo da vizinhança é desmascarado e não consegue mais separar

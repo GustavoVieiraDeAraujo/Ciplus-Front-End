@@ -98,6 +98,21 @@ export const StyleMainPlans = styled.main`
         position: absolute;
     }
     @media screen and (max-width: 500px){
+        .alinhamento{
+            display:none;
+        }
+        h1{
+            margin-left: 30px;
+            width: auto;
+        }
+        p{
+            width: auto;
+        }
+        li{
+            margin-left: 20px;
+            width: 300px;
+            font-size: auto;
+        }
         .banner{
             width: 100vw;
             margin: 0 0 0 0;
@@ -105,6 +120,9 @@ export const StyleMainPlans = styled.main`
         .Descricao{
             width: 100vw;
             font-size: 100vw;
+        }
+        .alinhaImgIngressos , .alinhaImgPipoca{
+            display: none;
         }
     }
 

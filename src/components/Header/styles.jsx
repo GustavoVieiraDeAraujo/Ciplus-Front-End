@@ -44,7 +44,7 @@ export const StyleHeader = styled.header`
         margin-top: 15px;
         margin-left: 10px;
     }
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 750px){
         grid-template-columns: 40% 0 50%;
         gap: 3px;
         .link{
@@ -75,6 +75,11 @@ export const StyleHeader = styled.header`
             justify-items: center;
             }
            
+    }
+    @media screen and (max-width: 500px){
+        .cineLogo{
+            width: 110px;
+        }
     }
 
 

@@ -20,7 +20,7 @@ export const StyleMainTickets = styled.main`
 
     .fPrincipal {
       height: 400px;
-      background-image: url("https://images.alphacoders.com/126/1263450.jpg");
+      //background-image: url("https://images.alphacoders.com/126/1263450.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -145,4 +145,41 @@ export const StyleMainTickets = styled.main`
       display: grid;
       align-items: center;
     }
+    @media screen and (max-width: 765px){
+        display: grid;
+        grid-template-rows: repeat(5, auto) ;
+      
+      .navBotoes{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+      }
+      .navA{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+      }
+      .pF{
+        font-size: 100%;
+      }
+     iframe{
+      width: 100vw;
+     }
+     .separa6, .separa5, .separa4, .separa3, .titleS, .pF{
+      width: 100vw;
+      height: auto;
+     }
+     .separa3{
+      grid-template-rows: auto auto;
+      margin-left: 0;
+      text-align: end;
+
+     }
+     .titleM{
+      font-size: 25px;
+     }
+     .imgEdit{
+      width: 25vw;
+      height: 30%;
+     }
+}
+
 `
