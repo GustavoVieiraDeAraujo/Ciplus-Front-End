@@ -34,7 +34,7 @@ export const SocialImg = styled.img`
 export const FooterMain = styled.div`
     background-color: #1E1E1E;
     display: grid;
-    width: 100%;
+    width: 100vw;
     column-gap: 25px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 230px;
@@ -43,6 +43,10 @@ export const FooterMainP = styled.p`
     margin: 0;
     align-self: center;
     text-align: justify;
+    @media screen and (max-width: 500px){
+        display:none;
+    }
+
 `
 export const FooterH2 = styled.h2`
     margin: 0;
@@ -55,6 +59,9 @@ export const FooterMainCompany = styled.div`
 export const FooterMainPlans = styled.div`
     display: grid;
     grid-template-rows: 40px 40px 40px 40px;
+    @media screen and (max-width: 500px){
+        display:none;
+    }  
 `
 export const FooterMainLinks = styled.div`
     display: grid;
