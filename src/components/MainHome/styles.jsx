@@ -23,6 +23,7 @@ background: #000000;
     text-align: center;
     color: white;
     width: 100vw;
+
 }
 .item1{
     align-items: center;
@@ -45,7 +46,7 @@ background: #000000;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: 350px;
     column-gap: 10px;
-    
+    height: auto;
     width: 100vw;
 }
 .ExpC{
@@ -62,6 +63,8 @@ background: #000000;
     text-align: center;
     border-radius: 10px;
     align-items: center;
+    width: auto;
+    height: auto;
 }
 
 .dimensoes{
@@ -152,8 +155,8 @@ h1{
     text-decoration: none;
 }
 .imgC{
-        width: auto;
-        height: auto;
+        width: 100%;
+        height: 100%;
     }
 
 @media screen and (max-width: 990px){
