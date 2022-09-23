@@ -22,31 +22,36 @@ background: #000000;
     margin-top: 0px;
     text-align: center;
     color: white;
-    width: auto;
+    width: 100vw;
 }
 .item1{
     align-items: center;
     display: grid;
     grid-template-columns: auto auto;
     margin-bottom: 80px;
+    width: 100vw;
+
 }
 .item2{
     align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 20px;
+    margin: 0px;
+    width: 100vw;
+
 }
 .Cards{
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: 350px;
     column-gap: 10px;
-    margin: 10px;
+    
+    width: 100vw;
 }
 .ExpC{
     display: grid;
     grid-template-columns: 1fr;
-
+    
     text-align: center;
     font-size: 30px;
     color: white;
@@ -104,6 +109,7 @@ background: #000000;
     font-size: 30px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    width: auto;
 }
 
 h1{
@@ -130,11 +136,13 @@ h1{
     display: grid;
     justify-items: end;
     height: 100px;
+    width: 100vw;
 }
 .divDaImg2{
 
     display: grid;
     justify-items: start;  
+    width: 100vw;
 }
 .navs{
     display: grid;
