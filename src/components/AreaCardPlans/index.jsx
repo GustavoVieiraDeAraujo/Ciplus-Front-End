@@ -10,7 +10,7 @@ export const AreaCardPlans =()=>{
 
     const [plans, setPlans] = useState([])
 
-    useEffect(()=> getPlans, [])
+    useEffect(()=> { getPlans() }, [])
 
     async function getPlans(){
         try{
