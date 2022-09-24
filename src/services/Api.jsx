@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://ciplus-back-end.herokuapp.com/",
+    baseURL: import.meta.env.VITE_API_URL || "https://ciplus-back-end.herokuapp.com/",
 });
 
 export const GetAll = async(entidade) => {
