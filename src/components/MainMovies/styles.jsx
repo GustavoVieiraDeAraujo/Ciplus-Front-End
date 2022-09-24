@@ -15,7 +15,7 @@ export const StyleMainMovies = styled.main`
         align-content: center;
         justify-content: center;
         justify-content: space-around;
-        width: 100%;
+        width: 100vw;
         background: #000000;
 
     }
@@ -48,6 +48,9 @@ export const StyleMainMovies = styled.main`
     }
     a{
         cursor:pointer;
+    }
+    .grid-item{
+        width: 100vw;
     }
     a:hover{
         background-color: #0B062B;
