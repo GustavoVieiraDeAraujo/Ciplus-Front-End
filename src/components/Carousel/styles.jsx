@@ -2,7 +2,7 @@ import styled from"styled-components";
 
 export const StyleCarousel=styled.div`
     background-color:#0B062B;
-    width: 1500px;
+    width: 100vw;
     height:100%;
     display:flex;
     justify-content:center;
