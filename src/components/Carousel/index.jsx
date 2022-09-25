@@ -27,22 +27,23 @@ export const Carousel = () => {
 
     return (
         <StyleCarousel>
-            <button class="buttons" onClick={handleLeftClick}>
+            <button className="buttons" onClick={handleLeftClick}>
                 <img src={leftArrow} alt="Scroll Left" />
             </button>
-            <div class="carousel" ref={carousel}>
+            <div className="carousel" ref={carousel}>
                 {data.map((movie) => {
                     const { id, movie_image_link } = movie;
                     return (
-                        <CardMovie 
-                        id={id} 
-                        imageLink={movie_image_link} 
-                        
+                        <CardMovie
+                        key={id}
+                        id={id}
+                        imageLink={movie_image_link}
+
                         />
                     );
                 })}
             </div>
-            <button class="buttons" onClick={handleRightClick}>
+            <button className="buttons" onClick={handleRightClick}>
                 <img src={rightArrow} alt="Scroll Right" />
             </button>
         </StyleCarousel>
