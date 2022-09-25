@@ -25,7 +25,7 @@ export const AreaCardPlans =()=>{
         <StyleAreaCardPlans>
             <div className = "organizaCard">
                 {plans.map( (plans)=>
-                    <Link className="linkRedi" to={"/register"}>
+                    <Link key={plans.id} className="linkRedi" to={"/register"}>
                      <CardPlan
                         value={plans.id}
                         type={plans.type}
