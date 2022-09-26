@@ -10,7 +10,7 @@ export const MainLogin = ()=> {
         <StyleMainLogin style={{ backgroundImage: `url(${netflix})`}}>
             <div className="grid-item">
                 <Input height={"40px"} background={"#444343"} width={"90%"} type={"email"} placeholder={"E-mail"} />
-                <Input height={"40px"}  background={"#444343"} width={"90%"} type={"text"} placeholder={"Insira sua senha"}/>
+                <Input height={"40px"}  background={"#444343"} width={"90%"} type={"password"} placeholder={"Insira sua senha"}/>
             <div className="divs">
                 <Input type={"radio"} />Lembrar de mim!
             </div>
