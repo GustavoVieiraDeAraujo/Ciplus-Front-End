@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Movies } from "./pages/Movies";
@@ -18,9 +18,12 @@ export const App = () => {
 
   const [display, setDisplay] = useState("")
 
-  setTimeout(() => {
-    setDisplay("none")
-  }, 5000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDisplay("none")
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <FormsProvider>
