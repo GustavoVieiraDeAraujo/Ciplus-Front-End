@@ -11,12 +11,18 @@ export const Forms = ({ ...props }) => {
 
     const finishBuildingObject = (object) => {
         const date = new Date();
-        const actualYear = date.getFullYear();
         const day = object["birthday"].slice(0, 2);
         const month = object["birthday"].slice(3, 5);
         const year = object["birthday"].slice(6);
         object["birthday"] = `${year}-${month}-${day}`;
-        object["age"] = actualYear - parseInt(year);
+        let age = date.getFullYear() - parseInt(year);
+        const birthdayAlreadyHappenedThisYear =
+            (date.getMonth() + 1 > parseInt(month)) ||
+            (date.getMonth() + 1 === parseInt(month) && date.getDate() >= parseInt(day));
+        if (!birthdayAlreadyHappenedThisYear) {
+            age -= 1;
+        }
+        object["age"] = age;
         object.plan_id = parseInt(object["plan_id"]);
         switch (object.plan_id) {
             case 1:
