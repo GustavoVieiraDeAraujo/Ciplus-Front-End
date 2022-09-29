@@ -8,6 +8,6 @@ export const StyleButton = styled.button`
     height: ${props => props.height ? props.height : 'auto'};
     border-radius: ${props => props.borderradius ? props.borderradius : 'auto'};
     border: ${props => props.border ? props.border : 'auto'};
-    background-color: ${props => props.color ? props.color : '#0B062B'};
+    background-color: ${props => props.background ? props.background : '#0B062B'};
     cursor: pointer;
 `
