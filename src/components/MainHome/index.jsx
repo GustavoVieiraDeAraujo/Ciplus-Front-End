@@ -67,7 +67,7 @@ export const MainHome = ()=> {
             </section>
             <section className="grid-item Fp">
                 <p className="FraEf">Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-                <form><input placeholder="teste" className="TesteInp" />
+                <form onSubmit={(e) => e.preventDefault()}><input placeholder="teste" className="TesteInp" />
                     <button className="Vl">Vamos lá!</button>
                 </form>
             </section>
