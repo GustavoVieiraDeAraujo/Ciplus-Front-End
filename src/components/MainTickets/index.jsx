@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { StyleMainTickets } from "./styles.jsx";
 import { GetAll, GetOne, CreateOne } from "../../services/Api.jsx";
+import { posterIndisponivel } from "../../utils/posterFallback.js";
 
 export const MainTickets = ({ movieId }) => {
 
@@ -67,6 +68,7 @@ export const MainTickets = ({ movieId }) => {
         <img
           className="imgEdit"
           src={movie.movie_image_link}
+          onError={(e) => { e.target.onerror = null; e.target.src = posterIndisponivel; }}
         />
         <div className="separa3">
           <h2 className="titleM">{movie.name}</h2>
