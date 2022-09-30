@@ -85,7 +85,7 @@ export const StyleMainTickets = styled.main`
 
     .separa6 {
       display: grid;
-      grid-template-rows: 100px 120px 200px 130px;
+      grid-template-rows: 100px 120px 80px 130px 80px 130px 110px auto;
       height: auto;
       text-align: center;
       background-color: #0b062b;
@@ -139,6 +139,47 @@ export const StyleMainTickets = styled.main`
     
     .estBotoes:hover {
       background-color: #0b062b;
+    }
+
+    .estBotoes.selecionado {
+      background-color: #13678a;
+      border-color: #13678a;
+    }
+
+    .compraArea {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      color: white;
+    }
+
+    .compraArea input[type="number"] {
+      width: 60px;
+      height: 30px;
+      margin-left: 10px;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+    }
+
+    .estBotoes.confirmar {
+      width: auto;
+      padding: 0 20px;
+      background-color: #13678a;
+    }
+
+    .mensagem {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+
+    .mensagem.sucesso {
+      color: #6bff8f;
+    }
+
+    .mensagem.erro {
+      color: #ff6b6b;
     }
 
     .inTittle {

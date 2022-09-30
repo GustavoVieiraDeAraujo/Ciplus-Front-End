@@ -1,7 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StyleMainTickets } from "./styles.jsx";
+import { GetAll, GetOne, CreateOne } from "../../services/Api.jsx";
 
-export const MainTickets = ()=> {
+export const MainTickets = ({ movieId }) => {
+
+  const [movie, setMovie] = useState(null);
+  const [tickets, setTickets] = useState([]);
+  const [session, setSession] = useState(null);
+  const [ticketId, setTicketId] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+  const [mensagem, setMensagem] = useState(null);
+
+  useEffect(() => {
+    if (movieId) {
+      GetOne("movies", movieId).then(response => setMovie(response));
+    } else {
+      GetAll("movies").then(response => setMovie(response && response[0]));
+    }
+    GetAll("tickets").then(response => setTickets(response || []));
+  }, [movieId]);
+
+  const handleComprar = async () => {
+    if (!movie || !session || !ticketId) {
+      setMensagem({ tipo: "erro", texto: "Escolha um horário e um tipo de ingresso" });
+      return;
+    }
+    const usuarioSalvo = localStorage.getItem("ciplus_usuario");
+    const usuario = usuarioSalvo ? JSON.parse(usuarioSalvo) : null;
+    const resposta = await CreateOne("purchases", {
+      movie_id: movie.id,
+      ticket_id: ticketId,
+      user_id: usuario ? usuario.id : null,
+      session,
+      quantity,
+    });
+    if (resposta) {
+      setMensagem({ tipo: "sucesso", texto: `Compra confirmada! ${quantity}x ingresso para a sessão de ${session}.` });
+    } else {
+      setMensagem({ tipo: "erro", texto: "Não foi possível concluir a compra, tente novamente" });
+    }
+  }
+
+  if (!movie) {
+    return null;
+  }
+
+  const sessoes = movie.movie_sessions ? movie.movie_sessions.split("/") : [];
+  const horas = Math.floor(movie.duration_minutes / 60);
+  const minutos = movie.duration_minutes % 60;
 
   return (
     <StyleMainTickets>
@@ -20,19 +66,19 @@ export const MainTickets = ()=> {
       <div className="grid-item separa2">
         <img
           className="imgEdit"
-          src="https://www.sonypictures.com.br/sites/brazil/files/2022-03/KEY%20ART_SPIDER%20NO%20WAY%20HOME.JPG"
+          src={movie.movie_image_link}
         />
         <div className="separa3">
-          <h2 className="titleM">Homem Aranha:<br/> Sem Volta Para Casa</h2>
+          <h2 className="titleM">{movie.name}</h2>
           <div className="org">
-            <p>12</p> <p>2:30 h</p> <p>AÇÃO / AVENTURA</p>
+            <p>{movie.classification.replace("CLASSIFICAÇÃO-", "")}</p> <p>{horas}:{String(minutos).padStart(2, "0")} h</p> <p>{movie.genre}</p>
           </div>
         </div>
       </div>
       <div className="grid-item separa4">
         <h2 className="titleS">Leia a Sinopse</h2>
         <p className="pF">
-        "Após o enorme sucesso nos cinemas, em 2021, Homem-Aranha: Sem Volta Para Casa retorna aos cinemas com mais 11 minutos de cenas adicionais inéditas. A vida de Peter Parker (Tom Holland) tornou-se um verdadeiro caos depois que sua identidade foi revelada para o mundo pelo vilão Mysterio. A inseparável Mary Jane (Zendaya) tenta ajudá-lo a encarar o fato como algo positivo, mas o jovem super-herói não se conforma e busca uma solução. Parker procura o parceiro Doutor Estranho (Benedict Cumberbatch) e pergunta se ele não conseguiria retirar essa informação da memória das pessoas. O arriscado feitiço foi colocado em prática, mas ao alterar a realidade eles criaram uma situação ainda mais perigosa. "
+        {movie.synopsis}
         </p>
       </div>
       <div className="grid-item separa5">
@@ -53,13 +99,41 @@ export const MainTickets = ()=> {
         </nav>
         <h2 className="titleDay">Hoje</h2>
         <nav className="navBotoes">
-          <button className="estBotoes">12:00</button>
-          <button className="estBotoes">15:30</button>
-          <button className="estBotoes">17:40</button>
-          <button className="estBotoes">19:00</button>
-          <button className="estBotoes">21:30</button>
-          <button className="estBotoes">23:00</button>
+          {sessoes.map((horario) => (
+            <button
+              key={horario}
+              className={`estBotoes ${session === horario ? "selecionado" : ""}`}
+              onClick={() => setSession(horario)}
+            >
+              {horario}
+            </button>
+          ))}
         </nav>
+        <h2 className="titleDay">Tipo de Ingresso</h2>
+        <nav className="navBotoes">
+          {tickets.map((ticket) => (
+            <button
+              key={ticket.id}
+              className={`estBotoes ${ticketId === ticket.id ? "selecionado" : ""}`}
+              onClick={() => setTicketId(ticket.id)}
+            >
+              {ticket.type} - R${(ticket.price / 100).toFixed(2)}
+            </button>
+          ))}
+        </nav>
+        <div className="compraArea">
+          <label>
+            Quantidade:
+            <input
+              type="number"
+              min="1"
+              value={quantity}
+              onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+            />
+          </label>
+          <button className="estBotoes confirmar" onClick={handleComprar}>Confirmar Compra</button>
+        </div>
+        {mensagem && <p className={`mensagem ${mensagem.tipo}`}>{mensagem.texto}</p>}
       </div>
     </StyleMainTickets>
   )

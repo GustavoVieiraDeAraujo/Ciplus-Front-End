@@ -37,6 +37,7 @@ export const App = () => {
             <Route path="/plans" element={<Plans/>} />
             <Route path="/register" element={<Register/>} />
             <Route path="/tickets" element={<Tickets/>} />
+            <Route path="/tickets/:movieId" element={<Tickets/>} />
           </Routes>
           <Footer />
       </BrowserRouter>
