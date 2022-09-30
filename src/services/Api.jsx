@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || "https://ciplus-back-end.herokuapp.com/",
+    baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000/",
 });
 
 // O token fica em localStorage (lembrar de mim) ou sessionStorage (sessao atual),
