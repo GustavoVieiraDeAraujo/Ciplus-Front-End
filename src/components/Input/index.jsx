@@ -9,15 +9,15 @@ export const Input = ({ ...props }) => {
             {props.titulo}
             <StyleInput
                 width={props.width}
-                paddingleft={props.paddingleft}
+                $paddingleft={props.paddingleft}
                 mask={props.mask}
-                background={props.background}
+                $background={props.background}
                 height={props.height}
-                borderradius={props.borderradius}
+                $borderradius={props.borderradius}
                 name={props.name}
                 type={props.type}
                 value={props.value}
-                display={props.display}
+                $display={props.display}
                 onChange={props.onChange}
                 placeholder={props.placeholder}
                 required

@@ -5,8 +5,8 @@ export const Button = ({ ...props }) => {
     return (
         <StyleButton
             marginbottom={props.marginbottom}
-            borderradius={props.borderradius}
-            border={props.border}
+            $borderradius={props.borderradius}
+            $border={props.border}
             width={props.width}
             height={props.height}
             onClick={props.onClick}
