@@ -1,28 +1,7 @@
 import React from "react";
 import { StyleMainTickets } from "./styles.jsx";
-import { useEffect, useState, useRef } from "react";
-import { GetAll } from "../../services/Api.jsx";
-
 
 export const MainTickets = ()=> {
-
-  //const [tickets, setTickets] = useState([])
-  //useEffect(() => getPlans, [])
-
-  //async function getPlans() {
-   // try {
-    //  const response = await GetAll("tickets")
-    //  console.log(response)
-   //   setTickets(tickets)
-  //  } catch (e) {
-      //console.log(e)
-   // }
- // } 
-
-  const [data, setData] = useState([]);
-
-  useEffect(() => { GetAll("movies").then(response => setData(response)) }, []);
-  console.log(data)
 
   return (
     <StyleMainTickets>
@@ -33,9 +12,9 @@ export const MainTickets = ()=> {
           height="100%"
           src="https://www.youtube.com/embed/rt-2cxAiPJk"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <div className="grid-item separa2">

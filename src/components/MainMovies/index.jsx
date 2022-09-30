@@ -11,9 +11,7 @@ export const MainMovies = ()=> {
                 <a className="button">Em breve</a>
                 <a className="button">Cinemas</a>
                 <Link className="link" to={"/tickets"}>
-                    <button className="button">
-                        <a className="button">Ingressos</a>
-                    </button>
+                    <button className="button">Ingressos</button>
                 </Link>
             </nav>
             <h1 className="grid-item Frase">Filmes em cartaz</h1>
