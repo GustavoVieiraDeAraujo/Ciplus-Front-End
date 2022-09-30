@@ -42,8 +42,7 @@ export const Forms = ({ ...props }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData);
+        const data = { ...formValues };
         finishBuildingObject(data);
         await CreateOne("users", data)
     }
