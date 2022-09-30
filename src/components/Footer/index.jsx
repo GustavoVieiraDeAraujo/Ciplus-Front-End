@@ -1,3 +1,4 @@
+import { Link as RouterLink } from "react-router-dom"
 import * as C from "./styles"
 
 import ImgFace from "./assets/facebook.png"
@@ -54,8 +55,8 @@ export function Footer() {
 
                 <C.FooterMainLinks className="links">
                     <C.FooterH2>LINKS</C.FooterH2>
-                    <C.Links href="">minha conta</C.Links>
-                    <C.Links href="">catálogo</C.Links>
+                    <C.Links as={RouterLink} to="/login">minha conta</C.Links>
+                    <C.Links as={RouterLink} to="/movies">catálogo</C.Links>
                     <C.Links href="">ajuda</C.Links>
                 </C.FooterMainLinks>
 
