@@ -52,6 +52,11 @@ export const StyleMainLogin = styled.main`
         color: white;
     }
 
+    .erro {
+        color: #ff6b6b;
+        font-size: 15px;
+    }
+
     @media screen and (max-width: 600px){
         
         .grid-container{

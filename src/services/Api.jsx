@@ -22,6 +22,15 @@ export const GetOne = async(entidade,id) => {
     }
 }
 
+export const Login = async(email,password) => {
+    try{
+        const requisicao = await api.post(`users/login`, { email, password })
+        return requisicao.data
+    }catch(e){
+        console.log(e)
+    }
+}
+
 export const CreateOne = async(entidade,objeto) => {
     try{
         const requisicao = await api.post(`${entidade}/create/one`, objeto)
