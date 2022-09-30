@@ -8,12 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # Pasta e arquivos que não precisam ser subidos 
-package-lock.json
 node_modules
 dist
 dist-ssr
 *.local
-package-lock.json
 
 # Editor directories and files
 .vscode/*
