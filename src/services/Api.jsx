@@ -4,6 +4,20 @@ const api = axios.create({
     baseURL: import.meta.env.VITE_API_URL || "https://ciplus-back-end.herokuapp.com/",
 });
 
+// O token fica em localStorage (lembrar de mim) ou sessionStorage (sessao atual),
+// nunca nos dois ao mesmo tempo
+export const getToken = () => {
+    return localStorage.getItem("ciplus_token") || sessionStorage.getItem("ciplus_token");
+}
+
+api.interceptors.request.use((config) => {
+    const token = getToken();
+    if (token) {
+        config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+});
+
 export const GetAll = async(entidade) => {
     try{
       const requisicao = await api.get(`${entidade}/get/all`)
@@ -25,6 +39,15 @@ export const GetOne = async(entidade,id) => {
 export const Login = async(email,password) => {
     try{
         const requisicao = await api.post(`users/login`, { email, password })
+        return requisicao.data
+    }catch(e){
+        console.log(e)
+    }
+}
+
+export const ResetPassword = async(email,cpf,newPassword) => {
+    try{
+        const requisicao = await api.post(`users/reset-password`, { email, cpf, newPassword })
         return requisicao.data
     }catch(e){
         console.log(e)

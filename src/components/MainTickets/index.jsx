@@ -26,12 +26,10 @@ export const MainTickets = ({ movieId }) => {
       setMensagem({ tipo: "erro", texto: "Escolha um horário e um tipo de ingresso" });
       return;
     }
-    const usuarioSalvo = localStorage.getItem("ciplus_usuario");
-    const usuario = usuarioSalvo ? JSON.parse(usuarioSalvo) : null;
+    // se o usuario estiver logado, a API identifica quem comprou pelo token de autenticacao
     const resposta = await CreateOne("purchases", {
       movie_id: movie.id,
       ticket_id: ticketId,
-      user_id: usuario ? usuario.id : null,
       session,
       quantity,
     });

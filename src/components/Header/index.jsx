@@ -6,12 +6,15 @@ import logo from "./assets/Cine.png"
 
 export const Header = ()=> {
     const [usuario] = useState(() => {
-        const salvo = localStorage.getItem("ciplus_usuario");
+        const salvo = localStorage.getItem("ciplus_usuario") || sessionStorage.getItem("ciplus_usuario");
         return salvo ? JSON.parse(salvo) : null;
     });
 
     const handleLogout = () => {
         localStorage.removeItem("ciplus_usuario");
+        localStorage.removeItem("ciplus_token");
+        sessionStorage.removeItem("ciplus_usuario");
+        sessionStorage.removeItem("ciplus_token");
         window.location.href = "/";
     }
 
