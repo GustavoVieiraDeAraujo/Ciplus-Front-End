@@ -1,0 +1,98 @@
+digraph Arquitetura {
+    rankdir=TB;
+    fontname="Helvetica";
+    node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, margin="0.15,0.08"];
+    edge [fontname="Helvetica", fontsize=9, color="#666666"];
+
+    subgraph cluster_app {
+        label="App.jsx";
+        style="rounded";
+        color="#888888";
+        fillcolor="#f5f5f7";
+        Router [label="BrowserRouter + Routes", fillcolor="#d9e6f5"];
+        Forms_Provider [label="FormsProvider\n(context/FormsContext.jsx)", fillcolor="#d9e6f5"];
+        Header [label="Header", fillcolor="#d9e6f5"];
+        Footer [label="Footer", fillcolor="#d9e6f5"];
+    }
+
+    subgraph cluster_pages {
+        label="Paginas (src/pages)";
+        style="rounded";
+        color="#888888";
+        fillcolor="#fbf3e6";
+        Home [fillcolor="#f6ddb0"];
+        Login [fillcolor="#f6ddb0"];
+        Movies [fillcolor="#f6ddb0"];
+        Plans [fillcolor="#f6ddb0"];
+        Register [fillcolor="#f6ddb0"];
+        Tickets [fillcolor="#f6ddb0"];
+    }
+
+    subgraph cluster_components {
+        label="Componentes (src/components)";
+        style="rounded";
+        color="#888888";
+        fillcolor="#eaf3ea";
+        MainHome [fillcolor="#c9e4c5"];
+        MainLogin [fillcolor="#c9e4c5"];
+        MainMovies [fillcolor="#c9e4c5"];
+        Carousel [fillcolor="#c9e4c5"];
+        CardMovie [fillcolor="#c9e4c5"];
+        MainPlans [fillcolor="#c9e4c5"];
+        AreaCardPlans [fillcolor="#c9e4c5"];
+        CardPlan [fillcolor="#c9e4c5"];
+        MainRegister [fillcolor="#c9e4c5"];
+        FormsComp [label="Forms", fillcolor="#c9e4c5"];
+        MainTickets [fillcolor="#c9e4c5"];
+        InputComp [label="Input", fillcolor="#c9e4c5"];
+        ButtonComp [label="Button", fillcolor="#c9e4c5"];
+    }
+
+    subgraph cluster_services {
+        label="Servico HTTP (src/services)";
+        style="rounded";
+        color="#888888";
+        fillcolor="#f7e6e6";
+        Api [label="Api.jsx\n(axios, baseURL via VITE_API_URL,\ninterceptor anexa o token salvo)", fillcolor="#eab8b8"];
+    }
+
+    Storage [label="localStorage /\nsessionStorage\n(ciplus_usuario, ciplus_token)", shape=cylinder, fillcolor="#e5e7eb"];
+
+    Backend [label="Ciplus-Back-End\n(API REST)", shape=cylinder, fillcolor="#d8d8d8"];
+
+    Router -> Home; Router -> Login; Router -> Movies;
+    Router -> Plans; Router -> Register; Router -> Tickets;
+
+    Home -> MainHome;
+    Login -> MainLogin;
+    Movies -> MainMovies;
+    Plans -> MainPlans;
+    Register -> MainRegister;
+    Tickets -> MainTickets;
+
+    MainMovies -> Carousel;
+    Carousel -> CardMovie;
+    MainPlans -> AreaCardPlans;
+    AreaCardPlans -> CardPlan;
+    MainRegister -> FormsComp;
+    FormsComp -> InputComp;
+    FormsComp -> ButtonComp;
+    CardPlan -> InputComp;
+    MainLogin -> InputComp;
+    MainLogin -> ButtonComp;
+
+    Carousel -> Api [label="GetAll('movies')"];
+    AreaCardPlans -> Api [label="GetAll('plans')"];
+    FormsComp -> Api [label="CreateOne('users', ...)"];
+    MainLogin -> Api [label="Login(email, senha)\nResetPassword(...)"];
+    MainTickets -> Api [label="GetOne/GetAll('movies','tickets')\nCreateOne('purchases', ...)"];
+    CardMovie -> Tickets [label="Link para\n/tickets/:id"];
+
+    Api -> Backend [label="HTTP", style=dashed];
+    Api -> Storage [label="le o token\npara anexar", style=dashed];
+    MainLogin -> Storage [label="grava usuario/token\nconforme lembrar-me", style=dashed];
+    Header -> Storage [label="le se ha\nusuario logado", style=dashed];
+
+    Forms_Provider -> FormsComp [style=dotted, label="formValues /\nhandleInputChange"];
+    Forms_Provider -> CardPlan [style=dotted];
+}
